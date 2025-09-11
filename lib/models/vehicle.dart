@@ -1,6 +1,7 @@
 import 'package:registro_de_fretes/models/body_type.dart';
 
 class Vehicle {
+  final String id;
   final String model;
   final String plate;
   final String color;
@@ -9,6 +10,7 @@ class Vehicle {
   final double capacity; // in tons
 
   const Vehicle({
+    required this.id,
     required this.model,
     required this.plate,
     required this.color,
@@ -19,6 +21,7 @@ class Vehicle {
 
   factory Vehicle.fromJson(Map<String, dynamic> json) {
     return Vehicle(
+      id: json['id'],
       model: json['model'],
       plate: json['plate'],
       color: json['color'],
@@ -30,6 +33,7 @@ class Vehicle {
 
   Map<String, dynamic> toJson() {
     return {
+      'id': id,
       'model': model,
       'plate': plate,
       'color': color,

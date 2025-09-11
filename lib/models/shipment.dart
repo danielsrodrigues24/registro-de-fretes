@@ -2,6 +2,7 @@ import 'package:registro_de_fretes/models/load_type.dart';
 import 'package:registro_de_fretes/models/status.dart';
 
 class Shipment {
+  final String id;
   final String origin;
   final String destination;
   final LoadType loadType;
@@ -10,6 +11,7 @@ class Shipment {
   final Status status;
 
   const Shipment({
+    required this.id,
     required this.origin,
     required this.destination,
     required this.loadType,
@@ -20,6 +22,7 @@ class Shipment {
 
   factory Shipment.fromJson(Map<String, dynamic> json) {
     return Shipment(
+      id: json['id'],
       origin: json['origin'],
       destination: json['destination'],
       loadType: LoadType.values.firstWhere((e) => e.name == json['loadType']),
@@ -31,6 +34,7 @@ class Shipment {
 
   Map<String, dynamic> toJson() {
     return {
+      'id': id,
       'origin': origin,
       'destination': destination,
       'loadType': loadType.name,
@@ -40,4 +44,3 @@ class Shipment {
     };
   }
 }
-
