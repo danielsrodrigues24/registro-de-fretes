@@ -1,0 +1,1 @@
+enum Status { scheduled, inProgress, completed }
