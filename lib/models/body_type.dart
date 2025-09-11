@@ -1,0 +1,1 @@
+enum BodyType { boxTruck, pickupOpen }
