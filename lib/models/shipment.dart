@@ -1,5 +1,7 @@
 import 'package:registro_de_fretes/models/load_type.dart';
 import 'package:registro_de_fretes/models/status.dart';
+import 'package:registro_de_fretes/models/customer.dart';
+import 'package:registro_de_fretes/models/vehicle.dart';
 
 class Shipment {
   final String id;
@@ -9,6 +11,8 @@ class Shipment {
   final double value;
   final DateTime dateTime;
   final Status status;
+  final Customer customer;
+  final Vehicle vehicle;
 
   const Shipment({
     required this.id,
@@ -18,6 +22,8 @@ class Shipment {
     required this.value,
     required this.dateTime,
     required this.status,
+    required this.customer,
+    required this.vehicle,
   });
 
   factory Shipment.fromJson(Map<String, dynamic> json) {
@@ -29,6 +35,8 @@ class Shipment {
       value: json['value'],
       dateTime: DateTime.parse(json['dateTime']),
       status: Status.values.firstWhere((e) => e.name == json['status']),
+      customer: Customer.fromJson(json['customer']),
+      vehicle: Vehicle.fromJson(json['vehicle']),
     );
   }
 
@@ -41,6 +49,8 @@ class Shipment {
       'value': value,
       'dateTime': dateTime.toIso8601String(),
       'status': status.name,
+      'customer': customer.toJson(),
+      'vehicle': vehicle.toJson(),
     };
   }
 }
