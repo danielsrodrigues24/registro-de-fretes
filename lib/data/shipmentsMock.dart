@@ -1,5 +1,3 @@
-import 'package:registro_de_fretes/data/customerMock.dart';
-import 'package:registro_de_fretes/data/vehiclesMock.dart';
 import 'package:registro_de_fretes/models/load_type.dart';
 import 'package:registro_de_fretes/models/shipment.dart';
 import 'package:registro_de_fretes/models/status.dart';
