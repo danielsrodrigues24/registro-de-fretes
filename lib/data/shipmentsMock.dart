@@ -9,11 +9,11 @@ List<Shipment> shipmentMock = [
     id: '1',
     origin: 'Girassol',
     destination: 'Cocalzinho',
-    vehicle: vehiclesMock[0],
+    vehicleId: 1,
     loadType: LoadType.moving,
     value: 500.00,
     dateTime: DateTime.now().subtract(Duration(days: 2)),
     status: Status.completed, 
-    customer: customerMock[0],
+    customerId: 1,
   ),
 ];
