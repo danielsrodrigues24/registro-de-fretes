@@ -46,7 +46,15 @@ class Home extends StatelessWidget{
                     padding: EdgeInsetsGeometry.all(10),
                     child: Text('HOJE')
                   ),
-                  Center(child: ShipmentCard())
+                  Center(
+                    child: ShipmentCard(
+                      origin: 'São Paulo',
+                      destination: 'Rio de Janeiro',
+                      value: "1500.00",
+                      date: '2024-06-10',
+                      time: '14:30',
+                    ),
+                  )
                 ],
               ),
             ),

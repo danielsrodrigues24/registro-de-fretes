@@ -9,6 +9,6 @@ List<Vehicle> vehiclesMock = [
     color: 'RED',
     bodyType: BodyType.pickupOpen,
     consumption: 7.0,
-    capacity: 20.0,
+    capacity: 0.8,
   ),
 ];
